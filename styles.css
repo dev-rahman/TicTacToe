@@ -16,7 +16,7 @@ html {
 
 body {
   color: #87ace0;
-  font-family: sans-serif;
+  font-family: "Courier New", Courier, monospace;
   display: flex;
   justify-content: center;
 }
@@ -25,7 +25,6 @@ body {
 .title {
   text-align: center;
   font-size: 3rem;
-  font-weight: 700;
 }
 
 .tic {
@@ -46,15 +45,24 @@ body {
   flex-direction: column;
   background: #9cc3d4ff;
   border-radius: 25px;
-  width: 80vw;
-  height: 70vh;
+  width: 40rem;
+  height: 50rem;
 }
 
-@media screen and (min-width: 500px) {
-  .container {
-    width: 400px;
-    height: 500px;
-  }
+.status-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  opacity: 0.8;
+}
+
+#win-status {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #283655;
+  position: relative;
+  right: 1rem;
 }
 
 /* Button */
@@ -67,7 +75,7 @@ body {
   background: var(--color-secondary);
   color: var(--color-main);
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin: 1rem;
   outline: 0;
   padding: 1rem;
@@ -88,8 +96,8 @@ body {
   margin: 1.5rem;
   padding: 1rem;
   border-radius: 25px;
-  width: 93%;
-  height: 75%;
+  width: 94%;
+  height: 80%;
 }
 
 .game-grid {
@@ -104,4 +112,52 @@ body {
 
 .game-cell {
   background-color: var(--color-main);
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 10rem;
+}
+
+.x::before {
+  content: "X";
+}
+
+.o::before {
+  content: "O";
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .container {
+    border-radius: 20px;
+    width: 30rem;
+    height: 40rem;
+  }
+
+  #win-status {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .game-grid-container {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+  }
+
+  .game-cell {
+    font-size: 8rem;
+  }
 }
