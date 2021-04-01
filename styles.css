@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  background: rgb(208, 212, 216);
   color: #87ace0;
   margin: 1rem;
   font-family: "Courier New", Courier, monospace;
@@ -64,7 +65,7 @@ body {
 }
 
 #win-status {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #283655;
   position: relative;
@@ -138,7 +139,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   background-color: #9cc3d4ff;
   border-radius: 20px;
@@ -172,7 +173,7 @@ body {
   }
 
   #win-status {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bolder;
   }
 

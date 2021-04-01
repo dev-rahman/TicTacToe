@@ -15,13 +15,13 @@ const handleWin = (winner) => {
   if (winner == "x") {
     xWins++;
     document.getElementById("win-status").innerHTML = `<p>X has won!</p>`;
+    document.getElementById("o-wins-out").innerHTML = `X won ${xWins} Times`;
   }
   if (winner == "o") {
     oWins++;
     document.getElementById("win-status").innerHTML = `<p>O has won!</p>`;
+    document.getElementById("x-wins-out").innerHTML = `O won ${oWins} Times`;
   }
-  document.getElementById("o-wins-out").innerHTML = `X won ${xWins} Times`;
-  document.getElementById("x-wins-out").innerHTML = `O won ${oWins} Times`;
 };
 
 const checkGameStatus = () => {
