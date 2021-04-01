@@ -16,6 +16,7 @@ html {
 
 body {
   color: #87ace0;
+  margin: 1rem;
   font-family: "Courier New", Courier, monospace;
   display: flex;
   justify-content: center;
@@ -37,6 +38,11 @@ body {
 
 .toe {
   color: var(--color-secondary);
+}
+
+.grand-container {
+  display: flex;
+  gap: 1rem;
 }
 
 /* Container */
@@ -128,15 +134,41 @@ body {
   content: "O";
 }
 
+.wins {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background-color: #9cc3d4ff;
+  border-radius: 20px;
+  width: 20rem;
+  height: 14rem;
+}
+
+.x-wins,
+.o-wins {
+  background-color: var(--color-secondary);
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 1rem;
+  color: var(--color-main);
+}
+
 @media screen and (max-width: 768px) {
+  .body {
+    margin: 0;
+    padding: 0;
+  }
+
   .title {
     font-size: 2rem;
   }
 
   .container {
     border-radius: 20px;
-    width: 30rem;
-    height: 40rem;
+    width: 29rem;
+    height: 39rem;
   }
 
   #win-status {
@@ -159,5 +191,14 @@ body {
 
   .game-cell {
     font-size: 8rem;
+  }
+
+  .grand-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wins {
+    width: 100%;
   }
 }
