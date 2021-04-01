@@ -2,23 +2,26 @@
 const cellDivs = document.querySelectorAll(".game-cell");
 const resetDiv = document.querySelector(".reset");
 
-console.log(cellDivs);
-console.log(resetDiv);
-
 // Game variables
 let gameIsLive = true;
 let xIsNext = true;
 let winner = null;
+let xWins = 0;
+let oWins = 0;
 
 // Functions
-const handleWin = (letter) => {
+const handleWin = (winner) => {
   gameIsLive = false;
-  if (letter == "x") {
+  if (winner == "x") {
+    xWins++;
     document.getElementById("win-status").innerHTML = `<p>X has won!</p>`;
   }
-  if (letter == "o") {
+  if (winner == "o") {
+    oWins++;
     document.getElementById("win-status").innerHTML = `<p>O has won!</p>`;
   }
+  document.getElementById("o-wins-out").innerHTML = `X won ${xWins} Times`;
+  document.getElementById("x-wins-out").innerHTML = `O won ${oWins} Times`;
 };
 
 const checkGameStatus = () => {

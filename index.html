@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>TicTacToe</title>
   </head>
-  <body>
+  <body bgcolor="grey">
     <div class="grand-container">
       <div class="container">
         <h1 class="title">
@@ -37,8 +37,12 @@
         </div>
       </div>
       <div class="wins">
-        <span class="x-wins"><p>X won 2 times.</p></span>
-        <span class="o-wins"><p>O won 2 times.</p></span>
+        <div class="x-wins">
+          <p><span id="x-wins-out"></span>...</p>
+        </div>
+        <div class="o-wins">
+          <p><span id="o-wins-out"></span>...</p>
+        </div>
       </div>
     </div>
 
